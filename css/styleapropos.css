@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #333;
+}
+
+
+
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 0 0 40px 40px;
+    background-color: #f5f5f5da;
+    display: flex;
+    height: 80px;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    height: 80px;
+
+}
+.logo img{
+    height: 100%;
+    
+}
+header ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+header ul li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+.parametre{
+    display: flex;
+    gap: 10px;
+}
+.parametre img{
+    height: 40px;
+}
+
+
+.bannier{
+    background-image: url('../img/img3f.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    width: 100%;
+}
+.aproposs{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 50px auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+}
+.apropos{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.apropos p{
+    text-align: justify;
+    font-size: 20px;
+}
+.photos{
+    height: 659px;
+    width: 1217px;
+}
+.photos img{
+    height: 100%;
+    width: 100%;
+}
