@@ -1,0 +1,156 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* GLOBAL */
+body {
+    background: #ffffff;
+    color: #333;
+    padding-top: 120px; /* espace pour le header fixed */
+}
+
+/* HEADER */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 0 0 40px 40px;
+    background-color: #f5f5f5da;
+    display: flex;
+    height: 80px;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo{
+    height: 70px;
+}
+.logo img{
+    height: 100%;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.parametre{
+    display: flex;
+    gap: 10px;
+}
+.parametre img{
+    height: 40px;
+}
+
+/* MAIN CONTAINER */
+.container{
+    width: 90%;
+    margin: 0 auto 100px auto;
+}
+
+/* PROFILE SECTION */
+.profile_section{
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 25px;
+}
+
+/* TITRES */
+.profile_section h1{
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: green;
+}
+
+.profile_section h2{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* INFOS UTILISATEUR */
+.profile_info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.profile_info p{
+    font-size: 16px;
+}
+
+/* ACTIONS */
+.profile_actions{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.profile_actions button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.profile_actions button:first-child{
+    background-color: green;
+    color: #fff;
+}
+
+.profile_actions button:last-child{
+    background-color: #000;
+    color: #fff;
+}
+
+/* TABLE COMMANDES */
+.orders_table{
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.orders_table thead{
+    background-color: green;
+    color: #fff;
+}
+
+.orders_table th,
+.orders_table td{
+    padding: 15px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.orders_table tbody tr{
+    border-bottom: 1px solid #ddd;
+}
+
+.orders_table tbody tr:last-child{
+    border-bottom: none;
+}
+
+.orders_table tbody tr:hover{
+    background-color: #f1f1f1;
+}

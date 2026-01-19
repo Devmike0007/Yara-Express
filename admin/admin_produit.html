@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Ajouter/Modifier produit</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <header>
+        <h1>Ajouter / Modifier un produit</h1>
+        <a href="admin_dashboard.html">Retour Dashboard</a>
+    </header>
+
+    <main>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <label for="nom">Nom du produit :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="categorie">Catégorie :</label>
+            <select id="categorie" name="categorie">
+                <option value="Pondu nature">Pondu nature</option>
+                <option value="Pondu pimenté">Pondu pimenté</option>
+                <option value="Pondu assaisonné">Pondu assaisonné</option>
+                <option value="Pack familial">Pack familial</option>
+                <option value="Portions express">Portions express</option>
+            </select>
+
+            <label for="prix">Prix :</label>
+            <input type="number" id="prix" name="prix" step="0.01" required>
+
+            <label for="stock">Stock :</label>
+            <input type="number" id="stock" name="stock" required>
+
+            <label for="image">Image :</label>
+            <input type="file" id="image" name="image">
+
+            <button type="submit">Enregistrer</button>
+        </form>
+    </main>
+</body>
+</html>

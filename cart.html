@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier | Yara</title>
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="img/logos2.png" alt="Logo Yara">
+        </div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="appropos.html">À propos</a></li>
+        </ul>
+        <div class="parametre">
+
+            <a href="search.html"><img src="img/search.png" alt="Recherche"></a>
+            <a href="login.html"><img src="img/utilisateur.png" alt="Utilisateur"></a>
+        </div>
+    </header>
+
+    <!-- SECTION PANIER -->
+    <main class="container">
+        <h1>Votre panier</h1>
+
+        <table class="panier_table" id="panierTable">
+            <thead>
+                <tr>
+                    <th>Produit</th>
+                    <th>Nom</th>
+                    <th>Prix</th>
+                    <th>Quantité</th>
+                    <th>Total</th>
+                    <th>Supprimer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-nom="Pondu Frais" data-prix="5">
+                    <td><img src="img/Editable layers.png" alt="Pondu Frais"></td>
+                    <td>Pondu Frais</td>
+                    <td>5.0 $</td>
+                    <td><input type="number" value="1" min="1" class="qty"></td>
+                    <td class="totalLigne">5.0 $</td>
+                    <td><button class="supprimer">X</button></td>
+                </tr>
+                <tr data-nom="Maïs Naturel" data-prix="4">
+                    <td><img src="img/product2.jpg" alt="Maïs Naturel"></td>
+                    <td>Maïs Naturel</td>
+                    <td>4.0 $</td>
+                    <td><input type="number" value="2" min="1" class="qty"></td>
+                    <td class="totalLigne">8.0 $</td>
+                    <td><button class="supprimer">X</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="total_panier">
+            <h2>Total : <span id="totalPanier">13.0</span> $</h2>
+            <button class="checkout" id="whatsappOrder">Commander via WhatsApp</button>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+        <footer class="footer">
+        <!-- Section services / avantages -->
+        <div class="footer-services">
+            <div class="service">
+                <div class="titre">
+                    <img src="img/delivery-man.png" alt="">
+                    <h3>Livraison rapide</h3>
+                </div>
+                <p>Nous assurons une livraison rapide et fiable à domicile, afin que vos produits arrivent frais et bien conservés.</p>
+                <div class="bas">
+                    <div class="bas_badge">
+                        <img src="img/delivery-man.png" alt="">
+                        <span>Livraison disponible à Kinshasa</span>
+                    </div>
+                    <div class="bas_badge">
+                        <img src="img/map-location-track.png" alt="">
+                        <span>Délais courts selon votre zone</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service">
+                <div class="titre">
+                    <img src="img/approved.png" alt="">
+                    <h3>Support client</h3>
+                </div>
+                <p>Une question ? Une commande ? Notre équipe est disponible via WhatsApp pour :</p>
+                <ul>
+                    <li>vous conseiller</li>
+                    <li>suivre votre commande</li>
+                    <li>répondre rapidement à vos besoins</li>
+                </ul>
+            </div>
+
+            <div class="service">
+                <div class="titre">
+                    <img src="img/approved.png" alt="">
+                    <h3>Qualité garantie</h3>
+                </div>
+                <p>Tous nos produits sont :</p>
+                <ul>
+                    <li>soigneusement sélectionnés</li>
+                    <li>transformés selon des procédures modernes</li>
+                    <li>contrôlés pour garantir goût, fraîcheur et sécurité alimentaire</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section informations principales -->
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>À propos de Yara Express</h3>
+                <p>
+                    Yara Express propose des produits fermiers de qualité, transformés et prêts à consommer, 
+                    directement du terroir à votre table. Nous valorisons les produits locaux et offrons une expérience pratique et saine.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liens utiles</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="boutique.html">Boutique</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="user/login.html">Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email : contact@yaraexpress.com</p>
+                <p>Téléphone : +243 99 000 0000</p>
+                <p>Adresse : Kinshasa, RDC</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Yara Express. Tous droits réservés.</p>
+            <a href="https://devmike0007.github.io/mon_site_web/">micah</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPT pour WhatsApp et mise à jour total -->
+    <script>
+        const panierTable = document.getElementById('panierTable');
+        const totalPanier = document.getElementById('totalPanier');
+        const whatsappBtn = document.getElementById('whatsappOrder');
+
+        // Met à jour les totaux lorsque quantité change
+        panierTable.addEventListener('input', e => {
+            if(e.target.classList.contains('qty')){
+                const row = e.target.closest('tr');
+                const prix = parseFloat(row.dataset.prix);
+                const qty = parseInt(e.target.value);
+                row.querySelector('.totalLigne').textContent = (prix * qty).toFixed(2) + ' $';
+                updateTotalPanier();
+            }
+        });
+
+        // Supprimer un produit
+        panierTable.addEventListener('click', e => {
+            if(e.target.classList.contains('supprimer')){
+                e.target.closest('tr').remove();
+                updateTotalPanier();
+            }
+        });
+
+        // Calcul total
+        function updateTotalPanier(){
+            let total = 0;
+            panierTable.querySelectorAll('tr').forEach(row => {
+                const ligneTotal = parseFloat(row.querySelector('.totalLigne').textContent);
+                total += ligneTotal;
+            });
+            totalPanier.textContent = total.toFixed(2);
+        }
+
+        // Envoyer commande sur WhatsApp
+        whatsappBtn.addEventListener('click', () => {
+            let message = 'Bonjour, je souhaite commander :%0A';
+            panierTable.querySelectorAll('tr').forEach(row => {
+                const nom = row.dataset.nom;
+                const prix = row.dataset.prix;
+                const qty = row.querySelector('.qty').value;
+                message += `${nom} - ${qty} pcs - ${prix * qty} $%0A`;
+            });
+            const numero = '243975732060'; // Ton numéro WhatsApp
+            window.open(`https://wa.me/${numero}?text=${message}`, '_blank');
+        });
+    </script>
+</body>
+</html>

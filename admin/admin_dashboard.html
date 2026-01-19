@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Dashboard</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <header>
+        <h1>Tableau de bord Admin</h1>
+        <a href="admin_login.html">Déconnexion</a>
+    </header>
+
+    <main>
+        <section class="produits_admin">
+            <h2>Produits</h2>
+            <button onclick="window.location.href='admin_produit.html'">Ajouter un produit</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Catégorie</th>
+                        <th>Prix</th>
+                        <th>Stock</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pondu Frais</td>
+                        <td>Pondu nature</td>
+                        <td>5 $</td>
+                        <td>50</td>
+                        <td>
+                            <button>Modifier</button>
+                            <button>Supprimer</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="commandes_admin">
+            <h2>Commandes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Client</th>
+                        <th>Produit</th>
+                        <th>Quantité</th>
+                        <th>Total</th>
+                        <th>WhatsApp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Marcel</td>
+                        <td>Pondu Frais</td>
+                        <td>2</td>
+                        <td>10 $</td>
+                        <td>
+                            <a href="https://wa.me/243000000000?text=Bonjour,%20je%20souhaite%20commander%20Pondu%20Frais" target="_blank">
+                                <button>Contacter</button>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

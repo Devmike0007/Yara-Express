@@ -1,19 +1,19 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
 body {
-    background: #ffffff;
+    background-color: #fff;
     color: #333;
 }
 
-
-
+/* HEADER */
 header{
     position: fixed;
+    top: 0;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -25,14 +25,10 @@ header{
     width: 90%;
     justify-content: space-around;
     align-items: center;
-}
-.logo{
-    height: 80px;
-
+    z-index: 100;
 }
 .logo img{
-    height: 100%;
-    
+    height: 80px;
 }
 header ul{
     display: flex;
@@ -53,41 +49,59 @@ header ul li a{
     height: 40px;
 }
 
-
-.bannier{
-    background-image: url('../img/img3f.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 600px;
-    width: 100%;
-}
-.aproposs{
-    position: relative;
-    left: 0;
-    right: 0;
-    margin: 50px auto;
+/* MAIN PANIER */
+main.container{
+    margin: 120px auto 50px auto;
     width: 90%;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-
 }
-.apropos{
+main.container h1{
+    margin-bottom: 30px;
+}
+.panier_table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.panier_table th, .panier_table td{
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+.panier_table img{
+    height: 80px;
+}
+.panier_table input[type="number"]{
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+}
+button.supprimer{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* TOTAL */
+.total_panier{
+    margin-top: 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     gap: 20px;
 }
-.apropos p{
-    text-align: justify;
-    font-size: 20px;
+.total_panier h2{
+    font-size: 24px;
+    color: green;
 }
-.photos{
-    height: 659px;
-    width: 1217px;
-}
-.photos img{
-    height: 100%;
-    width: 100%;
+.total_panier button.checkout{
+    padding: 10px 20px;
+    background-color: green;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 
@@ -195,4 +209,20 @@ header ul li a{
     padding-top: 15px;
     font-size: 14px;
     color: #ccc;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px){
+    footer{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .panier_table img{
+        height: 60px;
+    }
+    .total_panier{
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

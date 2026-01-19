@@ -1,0 +1,86 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('../img/fond.jpg');
+    color: #333;
+}
+
+
+/* ================= MAIN ================= */
+main.container {
+    margin: 120px auto 50px auto; /* pour laisser place au header fixe */
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+.img{
+    background-image: url(../img/countryside-woman-holding-plant-leaves.jpg);
+    background-size: cover;
+    width: 50%;
+    height: 700px;
+}
+.img img{
+    height: 50px;
+    margin: 20px;
+}
+/* ---------- Formulaire Login / Edit Profile ---------- */
+.user_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 700px;
+    background-color: #ffffff82;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.user_section h1{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.user_section form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.user_section form label{
+    font-size: 16px;
+}
+
+.user_section form input{
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.user_section form button{
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.user_section p{
+    text-align: center;
+    font-size: 14px;
+}
+
+.user_section a{
+    color: green;
+    text-decoration: none;
+}
+

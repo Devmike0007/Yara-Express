@@ -1,0 +1,153 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('../img/fond.jpg');
+    color: #333;
+}
+
+
+/* ================= MAIN ================= */
+main.container {
+    margin: 120px auto 50px auto; /* pour laisser place au header fixe */
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+.img{
+    background-image: url(../img/countryside-woman-holding-plant-leaves.jpg);
+    background-size: cover;
+    width: 50%;
+    height: 550px;
+}
+.img img{
+    height: 50px;
+    margin: 20px;
+}
+/* ---------- Formulaire Login / Edit Profile ---------- */
+.user_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 550px;
+    background-color: #ffffff82;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.user_section h1{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.user_section form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.user_section form label{
+    font-size: 16px;
+}
+
+.user_section form input{
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.user_section form button{
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.user_section p{
+    text-align: center;
+    font-size: 14px;
+}
+
+.user_section a{
+    color: green;
+    text-decoration: none;
+}
+
+
+
+/* ================= FOOTER ================= */
+footer{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 100px auto;
+    margin-bottom: 0;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer_gauche{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer .footer_gauche .titre{
+    display: flex;
+    font-size: 20px;
+    gap: 20px;
+    align-items: center;
+}
+
+footer .footer_gauche p{
+    text-align: justify;
+}
+
+footer .footer_gauche .titre img{
+    height: 30px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media screen and (max-width: 1024px){
+    .profile_section {
+        width: 100%;
+    }
+    .user_section {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    header{
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+    header ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .parametre{
+        justify-content: center;
+    }
+    main.container{
+        width: 95%;
+    }
+    .profile_actions{
+        flex-direction: column;
+    }
+}

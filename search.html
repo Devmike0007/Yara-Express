@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche | Yara</title>
+    <link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="img/logos2.png" alt="Logo Yara">
+        </div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="appropos.html">À propos</a></li>
+        </ul>
+        <div class="parametre">
+            <a href="cart.html"><img src="img/shopping.png" alt="Panier"></a>
+            <a href="login.html"><img src="img/utilisateur.png" alt="Utilisateur"></a>
+        </div>
+
+    </header>
+    
+
+    <main class="container">
+        <!-- Barre de recherche -->
+        <form action="" method="get">
+            <img src="img/search.png" alt="">
+            <input type="text" placeholder="Rechercher un produit" name="recherche" required>
+            <button type="submit">Rechercher</button>
+        </form>
+        <!-- RESULTATS DE RECHERCHE -->
+
+        <h1>Résultats pour "riz"</h1>
+
+        <div class="products">
+            <!-- Produit 1 -->
+            <div class="produit_card">
+                <img src="img/Editable layers.png" alt="Pondu Frais">
+                <div class="text">
+                    <div class="left">
+                        <h3>Pondu Frais</h3>
+                        <div class="badge">
+                            <img src="img/approved.png" alt="Approved">
+                            <p>100% nature</p>
+                        </div>
+                    </div>
+                    <h2>5.0 $</h2>
+                </div>
+                <div class="bas">
+                    <button type="button">Ajouter au panier</button>
+                    <button type="button" id="livraison">Livraison rapide</button>
+                </div>
+            </div>
+
+            <!-- Produit 2 -->
+            <div class="produit_card">
+                <img src="img/product2.jpg" alt="Maïs Naturel">
+                <div class="text">
+                    <div class="left">
+                        <h3>Maïs Naturel</h3>
+                        <div class="badge">
+                            <img src="img/approved.png" alt="Approved">
+                            <p>100% bio</p>
+                        </div>
+                    </div>
+                    <h2>4.0 $</h2>
+                </div>
+                <div class="bas">
+                    <button type="button">Ajouter au panier</button>
+                    <button type="button" id="livraison">Livraison rapide</button>
+                </div>
+            </div>
+
+            <!-- Tu peux ajouter d'autres produits ici -->
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+    >
+    </footer>
+</body>
+</html>
